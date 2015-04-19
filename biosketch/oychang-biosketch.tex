@@ -1,0 +1,179 @@
+% Template by Theodore P. Pavlic
+% http://phaseportrait.blogspot.com/2013/02/latex-template-for-nsf-style.html
+% Further guidelines taken from
+% http://www.nsf.gov/pubs/policydocs/pappguide/nsf13001/gpg_2.jsp#IIC2fi
+
+\documentclass[svgnames,11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\renewcommand\thesection{(\alph{section})}
+\renewcommand\thesubsection{(\alph{subsection})}
+
+\usepackage{calc}
+
+\usepackage{lastpage}
+%\newcommand{\pageoflastpage}{Page {\thepage} of \pageref*{LastPage}}
+%\newcommand{\pageoflastpage}{{\thepage} of \pageref*{LastPage}}
+\newcommand{\pageoflastpage}{}
+
+% Redefine the plain pagestyle for the title page
+\makeatletter
+\let\oldps@plain\ps@plain
+\renewcommand{\ps@plain}{\oldps@plain%
+\renewcommand{\@evenfoot}{\hfil\pageoflastpage\hfil}%
+\renewcommand{\@oddfoot}{\@evenfoot}}
+\makeatother
+
+% Use fancy for non-title pages
+\usepackage{fancyhdr}
+\fancyhead{}
+\fancyfoot{}
+\cfoot{\pageoflastpage}
+\pagestyle{fancy}
+
+\usepackage{xspace}
+
+\usepackage[shortlabels]{enumitem}
+\usepackage{graphicx}
+\usepackage{varioref}
+\usepackage[%
+        colorlinks=true,urlcolor=,
+        pdfpagelabels=true,hypertexnames=true,
+        plainpages=false,naturalnames=true,
+        ]{hyperref}
+%
+\usepackage{url}
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{label=,leftmargin={\bibhang+\widthof{[9]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=\textbf{\arabic*.},leftmargin={\bibhang+\widthof{[999]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
+
+\title{%
+        \vspace{-2\baselineskip}
+            \normalsize
+            Biographical Sketch\\
+            \vspace{0.2\baselineskip}
+            {\large\textbf{Oliver Y.~Chang}}\\
+            \vspace{0.5\baselineskip}
+            \hrule
+            \vspace{0.5\baselineskip}
+            Undergraduate Student, College of Arts and Sciences,
+            University of Miami, Coral Gables, FL 33124\\
+            \href{mailto:o.chang@umiami.edu}{o.chang@umiami.edu}
+        \vspace{-1.5ex}
+        }
+\date{}
+\author{}
+
+\hypersetup{%
+        pdfsubject={NSF Biographical Sketch of Oliver Y.~Chang},
+        pdfauthor={Oliver Y.~Chang},
+        pdftitle={NSF Biographical Sketch of Oliver Y.~Chang},
+        pdfkeywords={}
+        }
+
+\newcommand{\ie}{i.e.\xspace}
+\newcommand{\eg}{e.g.\xspace}
+
+\begin{document}
+
+\maketitle
+\vspace{-4\baselineskip}
+
+\subsection{Professional Preparation}
+
+    University of Miami, Coral Gables, FL;
+        Computer Science;
+        3.8 GPA, B.S., 2012--present
+
+\subsection{Appointments}
+
+\begin{itemize}[label={\quad 9999--9999:},leftmargin=*,itemsep=0pt]
+
+    \item[2015--present:]
+        \textbf{REU Researcher},
+        Florida International University,
+        Miami, FL
+
+    \item[2014--present:]
+        \textbf{Undergraduate Teaching Assistant},
+        University of Miami,
+        Coral Gables, FL
+
+    \item[2014:]
+        \textbf{Science Data Engineering \& Archiving Intern},
+        NASA Jet Propulsion Lab,
+        Pasadena, CA
+
+    \item[2013--2014:]
+        \textbf{Software Engineering Intern},
+        Senzari, Inc.,
+        Miami, FL
+
+\end{itemize}
+
+\subsection{Products}
+
+\begin{bibenum}[itemsep=5pt]
+
+    \item \textbf{Chang, O.Y.}, E.~Armstrong, and D.~Foster.
+        Improving Compliance for Earth Science Data Records.
+        Poster session presented at: Earth Science Data Record Challenges.
+        2014 Fall Meeting of the American Geophysical Union; 2014 Dec 15--19; San Francisco, CA.
+
+    \item \textbf{Chang, O.Y.}, G.~Chang, and E.~Armstrong.
+        Automating Metadata Compliance Checking.
+        Final report and presentation. 2014 August.
+
+\end{bibenum}
+
+\subsection{Synergistic Activities}
+
+\begin{itemize}[itemsep=0pt]
+    \item Developed one of the first FirefoxOS Apps for Senzari, now rated 4 stars
+    \item Tutored underclassmen in Java \& C Programming
+    \item Taught undergraduate lab sessions for Computer Programming I and II
+    \item Member, Association for Computing Machinery
+    \item Recipient, National Merit Scholarship
+\end{itemize}
+
+\subsection{Collaborators \& Other Affiliations}
+
+\begin{bibsection}
+
+    \item \textbf{Collaborators and Co-Editors:}
+        \emph{Florida International University}:
+            Ismail Guvenc;
+        \emph{University of Miami}:
+            Lance Z.~Levine;
+            Elsa Maria~Rodriguez~Plaza;
+        \emph{NASA Jet Propulsion Lab}:
+            Edward M.~Armstrong;
+            George W.~Chang;
+        \emph{Applied Science Associates}:
+            David Foster
+
+
+\end{bibsection}
+
+\end{document}
