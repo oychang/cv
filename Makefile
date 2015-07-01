@@ -7,4 +7,4 @@ $(TEX_FILE:.tex=.pdf): $(TEX_FILE) $(STY_FILE)
 
 .PHONY: clean
 clean:
-	rm -f *.aux *.log *out
+	$(RM) *.aux *.log *out
