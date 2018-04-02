@@ -1,0 +1,202 @@
+\documentclass[letterpaper,MMMyyyy,nonstopmode]{simpleresumecv}
+
+% https://github.com/zachscrivena/simple-resume-cv
+
+\newcommand{\CVAuthor}{Oliver Chang}
+\newcommand{\CVTitle}{Oliver Chang's Resum\'e}
+\newcommand{\CVWebpage}{https://oychang.com}
+
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={\CVWebpage},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+unicode=true,
+bookmarks=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+\newcommand{\Code}[1]{\mbox{\textbf{#1}}}
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\Title{\CVAuthor}
+
+\begin{SubTitle}
+\href{mailto:oliver@oychang.com}{oliver@oychang.com}
+\,\SubBulletSymbol\,
++1-727-771-3641
+\,\SubBulletSymbol\,
+\href{\CVWebpage}
+{\url{\CVWebpage}}
+\end{SubTitle}
+
+\begin{Body}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\Section{Education}{Education}{PDF:Education}
+
+\Entry
+\href{http://www.rice.edu/}{\textbf{Rice University}},
+Houston, Texas, USA
+\Gap
+\BulletItem
+Ph.D. in \href{http://www.cs.rice.edu/}{Computer Science}
+\hfill
+\DatestampYM{2016}{08} --
+\begin{Detail}
+\SubBulletItem Relevant coursework in Machine Learning, Artificial Intelligence, Computer Logic, Database Design
+\SubBulletItem Web Development Teaching Assistant (basics of git, HTML, CSS, node.js, React.js)
+\end{Detail}
+
+\BigGap
+
+\Entry
+\href{http://welcome.miami.edu/}{\textbf{University of Miami}},
+Coral Gables, Florida, USA
+\Gap
+\BulletItem
+B.S. in \href{http://www.as.miami.edu/csc/}{Computer Science \& Geography}
+\hfill
+\DatestampYM{2012}{08} -- \DatestampYM{2016}{05}
+\begin{Detail}
+\SubBulletItem Mathematics Minor; Geospatial Technology Certificate
+\SubBulletItem Magna Cum Laude with General and Departmental Honors
+\end{Detail}
+
+%%%%%%%%%%%%%%%%%%%%%
+%% WORK EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%
+
+\Section{Professional Experience}{Professional Experience}{PDF:ProfessionalExperience}
+
+\Entry
+\href{http://www.rice.edu/}{\textbf{Rice University}}, Computer Science Department
+\Gap
+\BulletItem Graduate Researcher
+\hfill \DatestampYM{2016}{08} -- \DatestampYM{2018}{03}
+\begin{Detail}
+\SubBulletItem Research focus on data-driven deep learning techniques for program synthesis
+\end{Detail}
+
+\Entry
+\href{http://www.rice.edu/}{\textbf{Baker Institute}}, McNair Center for Entrepreneurship \& Innovation
+\Gap
+\BulletItem Graduate Student Assistant
+\hfill \DatestampYM{2017}{05} -- \DatestampYM{2018}{01}
+\begin{Detail}
+\SubBulletItem Created a parallel Extract, Transform, Load (ETL) system in Java to parse XML data from the US Patent and Trademark Office XML source files to create corpus for innovation research paper
+\SubBulletItem Implemented a geoprocessing approach to measuring innovation via startup agglomeration for a published whitepaper
+\SubBulletItem Mentored undergraduates in the ethical use of data and software engineering best practices
+\end{Detail}
+
+\Entry
+\textbf{REConsole, Inc.}, Fort Lauderdale, Florida
+\Gap
+\BulletItem
+Software Engineering Intern
+\hfill
+\DatestampYM{2016}{01} -- \DatestampYM{2016}{05}
+\begin{Detail}
+\SubBulletItem Automated a day's worth of manual engineering work by automating the data extract, transform, load (ETL) pipeline into a reproducible process built with Kubernetes, Apache Spark, ElasticSearch, and PostGIS
+\SubBulletItem Worked with Lead UX Designer to systematically reduce geographical parsing errors or to find alternative methods of representing real estate transaction data
+\end{Detail}
+
+\Entry
+\href{http://www.fiu.edu/}{\textbf{Florida International University}}, Electrical \& Computer Engineering Department
+\Gap
+\BulletItem REU Student, Mobile, Pervasive, and Autonomous Technologies Lab
+\hfill \DatestampYM{2015}{10} -- \DatestampYM{2016}{05}
+\begin{Detail}
+\SubBulletItem Synthesized WiFi metadata, GPS location data, and qualitative user input in an Android app to perform indoor Simultaneous Localization and Mapping (SLAM) data collection
+\SubBulletItem Used advanced techniques, such as IEEE 802.11 Probe Request collection, to match industry-standard indoor SLAM
+\SubBulletItem Won 2nd Place in 2015 University of Miami GIS Day with a use case, ``GPS \& WiFi Choke Point Analysis''
+\end{Detail}
+
+\Entry
+\href{http://illinois.edu/}{\textbf{University of Illinois, Urbana-Champaign}}, Department of Computer Science
+\Gap
+\BulletItem REU Student, Scientific Computing Group, Parallel Computing Institute
+\hfill \DatestampYM{2015}{06} -- \DatestampYM{2015}{08}
+\begin{Detail}
+\SubBulletItem Received training in parallel computing frameworks OpenMP, CUDA, and MPI from industry leaders in the field
+\SubBulletItem Optimized legacy Fortran77 MPI code using hardware-software features to attain an up to 20\% speedup
+\SubBulletItem Co-presented poster ``Analyzing the Scalability of Nek5000'' to the University of Illinois parallel community
+\end{Detail}
+
+\Entry
+\href{http://www.jpl.nasa.gov/}{\textbf{National Aeronautics and Space Administration}}, Jet Propulsion Laboratory
+\Gap
+\BulletItem Summer Intern, Physical Oceanography Distributed Active Archive Center (PO.DAAC)
+\hfill
+\DatestampYM{2014}{06} -- \DatestampYM{2014}{08}
+\begin{Detail}
+\SubBulletItem Created a Python webservice for validating satellite data from third-party vendors using industry-standard specifications that were previously too hard to comply with or to understand; the service is still the industry standard
+\SubBulletItem Poster featuring the design and merit of the work, ``Improving Compliance for Earth Science Data Records,'' presented at the 2014 Meeting of the American Geophysical Union
+\end{Detail}
+
+\Entry
+\textbf{Senzari, Inc.}, Miami, Florida
+\Gap
+\BulletItem
+Software Engineering Intern
+\hfill
+\DatestampYM{2013}{03} -- \DatestampYM{2014}{04}
+\begin{Detail}
+\SubBulletItem Led visualization team for a business intelligence dashboard (Django, Google Charts \& CoffeeScript)
+\SubBulletItem Built webapp in HTML5/jQuery Mobile to explore, listen, and visualize music network graph queries
+\end{Detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% AWARDS & SCHOLARSHIPS %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section{Awards \& Scholarships}{Awards \& Scholarships}{PDF:AwardsAndScholarships}
+
+\Gap
+\BulletItem CAV Student Fellowship
+\hfill
+\DatestampYM{2017}{07}
+\begin{Detail}
+\Item Covered attendance costs to the 29th International Conference for Computer Aided Verification in Heidelberg, Germany
+\end{Detail}
+
+\Gap
+\BulletItem Outstanding Computer Science Undergraduate, University of Miami
+\hfill
+\DatestampYM{2016}{05}
+\begin{Detail}
+\Item Awarded by the faculty of the computer science department to a single graduating student.
+\end{Detail}
+
+\Gap
+\BulletItem National Merit Scholarship
+\hfill
+\DatestampYM{2012}{08} -- \DatestampYM{2016}{05}
+\begin{Detail}
+\Item Supported by the National Merit Scholarship Program for four years
+\end{Detail}
+
+%%%%%%%%%%%%
+%% SKILLS %%
+%%%%%%%%%%%%
+
+\Section{Skills}{Skills}{PDF:Skills}
+\Entry Python, Java, C, Unix, TensorFlow, Apache Spark, Amazon Web Services, Kubernetes, Docker, ElasticSearch, PostgreSQL, PostGIS, ESRI ArcGIS
+
+\end{Body}
+\end{document}
